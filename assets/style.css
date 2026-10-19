@@ -432,6 +432,59 @@ section { padding: 64px 0 0; }
 .feature-chips span:nth-child(6) { transition-delay: .4s; } .feature-chips span:nth-child(7) { transition-delay: .48s; }
 .feature-chips span:nth-child(8) { transition-delay: .56s; }
 
+/* 기능 카드 */
+.feats { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.feats.three { grid-template-columns: repeat(3, 1fr); }
+.feat {
+  position: relative; padding: 28px; border-radius: 24px; background: var(--card); border: 1px solid var(--line);
+  overflow: hidden; transition: transform .3s, border-color .3s;
+}
+.feat::after {
+  content: ""; position: absolute; inset: -1px; border-radius: inherit; pointer-events: none; opacity: 0; transition: .3s;
+  background: radial-gradient(400px circle at 0% 0%, color-mix(in srgb, var(--accent) 20%, transparent), transparent 60%);
+}
+.feat:hover { transform: translateY(-6px); border-color: var(--accent); }
+.feat:hover::after { opacity: 1; }
+.feat-ic {
+  width: 60px; height: 60px; border-radius: 18px; display: grid; place-items: center; font-size: 30px; margin-bottom: 16px;
+  background: color-mix(in srgb, var(--accent) 16%, transparent); animation: bob 4s ease-in-out infinite;
+}
+.feat:nth-child(2) .feat-ic { animation-delay: -1.3s; } .feat:nth-child(3) .feat-ic { animation-delay: -2.6s; }
+.feat h3 { margin: 0 0 6px; font-size: 1.25rem; }
+.feat p { margin: 0; color: var(--muted); }
+.feat-flow { display: flex; align-items: center; gap: 6px; margin-top: 20px; flex-wrap: wrap; }
+.feat-flow span { font-size: .82rem; padding: 6px 10px; border-radius: 10px; background: var(--bg2); border: 1px solid var(--line); white-space: nowrap; }
+.feat-flow i { flex: 1; min-width: 16px; height: 2px; background: var(--line); position: relative; overflow: hidden; }
+.feat-flow i::after { content: ""; position: absolute; inset: 0; width: 40%; background: var(--accent); animation: flow 1.4s linear infinite; }
+.examples { display: grid; gap: 16px; }
+
+/* 연동 목록 */
+.links { display: grid; gap: 12px; margin: 22px 0 26px; }
+.lk {
+  display: flex; gap: 14px; align-items: center; padding: 14px 18px; border-radius: 16px; background: var(--card); border: 1px solid var(--line);
+  opacity: 0; transform: translateX(24px); transition: .6s;
+}
+.in .lk { opacity: 1; transform: none; }
+.in .lk:nth-child(2) { transition-delay: .15s; } .in .lk:nth-child(3) { transition-delay: .3s; }
+.lk-ic { font-size: 26px; width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; background: color-mix(in srgb, var(--accent) 15%, transparent); flex: 0 0 auto; }
+.lk b { display: block; }
+.lk small { color: var(--muted); }
+
+/* 템플릿·편집기 목업 */
+.tpls { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.tpl { border: 1px solid #e6e6e6; border-radius: 10px; padding: 6px; text-align: center; font-size: 12px; font-weight: 600; }
+.tpl i { display: block; height: 70px; border-radius: 6px; margin-bottom: 6px; }
+.builder { display: grid; grid-template-columns: 110px 1fr; min-height: 260px; }
+.blocks { background: #f6f7f9; border-right: 1px solid #e2e5ec; padding: 10px; display: grid; gap: 8px; align-content: start; }
+.blocks div { background: #fff; border: 1px solid #e2e5ec; border-radius: 8px; padding: 7px 8px; font-size: 12px; font-weight: 600; }
+.canvas { padding: 14px; display: grid; gap: 8px; align-content: start; }
+.cv-img { height: 80px; border-radius: 10px; background: #f3e9e0; display: grid; place-items: center; font-size: 30px; }
+.cv-line { height: 10px; border-radius: 5px; background: #eee; }
+.cv-line.short { width: 60%; }
+.cv-drop { border: 2px dashed #ff8a3d; border-radius: 10px; padding: 14px; text-align: center; color: #ff8a3d; font-size: 12px; font-weight: 700; }
+.slide.active .cv-drop { animation: dz2 1.6s 1.2s infinite; }
+@keyframes dz2 { 50% { background: #fff3ea; } }
+
 /* ---------- 다음 주제 ---------- */
 .next { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 80px; }
 .next a { padding: 24px; border-radius: 20px; background: var(--card); border: 1px solid var(--line); text-decoration: none; transition: .25s; }
@@ -453,7 +506,7 @@ section { padding: 64px 0 0; }
   .cap .num { font-size: 2.8rem; }
   .flips { grid-template-columns: repeat(2, 1fr); }
   .flips .flip:last-child { grid-column: span 2; }
-  .demo2, .next { grid-template-columns: 1fr; }
+  .demo2, .next, .feats, .feats.three { grid-template-columns: 1fr; }
   .showcase { grid-template-columns: 1fr; justify-items: center; text-align: center; }
   .feature-chips { justify-content: center; }
   .pipe .node { width: 58px; font-size: .7rem; }
