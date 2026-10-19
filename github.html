@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>③ 깃허브 + Claude로 수업 자료 만들기</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-topic="github">
+
+<header class="topbar">
+  <a class="home" href="index.html"><span class="logo"><span>✦</span></span><b>웹 제작 연수</b></a>
+  <nav class="tabs">
+    <a href="sheet.html">① 스프레드시트</a>
+    <a href="cafe24.html">② 카페24</a>
+    <a class="on" href="github.html">③ 깃허브+Claude</a>
+    <a href="oesol.html">④ 외솔.한국</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="badge">🐙</div>
+    <h1 class="reveal"><em>말로</em> 만드는 수업 자료 사이트</h1>
+    <p class="reveal d1">Claude가 만들고, 깃허브가 무료로 공개합니다.</p>
+
+    <div class="pipe reveal d2">
+      <div class="node"><div class="ic">💬</div>요청하기</div>
+      <div class="link"></div>
+      <div class="node"><div class="ic">🤖</div>Claude 작업</div>
+      <div class="link"></div>
+      <div class="node"><div class="ic">🔀</div>PR 확인</div>
+      <div class="link"></div>
+      <div class="node"><div class="ic">✅</div>Merge</div>
+      <div class="link"></div>
+      <div class="node"><div class="ic">🌐</div>사이트 반영</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec-title reveal">처음 한 번만 준비</h2>
+    <p class="sec-sub reveal">← → 키나 화살표 버튼으로 넘겨 보세요.</p>
+
+    <div class="deck reveal" data-deck>
+      <div class="deck-progress"><i></i></div>
+      <div class="deck-view"><div class="deck-track">
+
+        <div class="slide">
+          <div class="mock gh">
+            <div class="ghbar">🐙 <span>Create a new repository</span></div>
+            <div class="body">
+              <label>Repository name</label><div class="inp">ai-class</div>
+              <label>공개 범위</label><div class="inp">● Public</div>
+              <label><input type="checkbox" checked style="display:inline;width:auto;margin:0 6px 0 0">Add a README file</label>
+              <div style="text-align:right;margin-top:12px"><span class="gbtn green hl" data-target>Create repository</span></div>
+            </div>
+          </div>
+          <div class="cap"><span class="num">01</span><h3>저장소 만들기</h3><p><a href="https://github.com" target="_blank" rel="noopener" style="color:var(--accent)">github.com</a> 가입 → <kbd>+</kbd> → <kbd>New repository</kbd></p></div>
+        </div>
+
+        <div class="slide">
+          <div class="mock">
+            <div class="bar"><i></i><i></i><i></i><span class="url">claude.ai/code</span></div>
+            <div class="body">
+              <b style="display:block;margin-bottom:10px">저장소 선택</b>
+              <div class="repo-pick">
+                <div class="hl" data-target style="border-color:#d97757;background:#fdf3ee"><span>📁 내아이디/ai-class</span><b style="color:#d97757">선택</b></div>
+                <div><span>📁 내아이디/old-project</span><span></span></div>
+              </div>
+              <p style="color:#888;font-size:12px;margin-top:12px">처음이면 GitHub 계정 연결 버튼이 먼저 나와요</p>
+            </div>
+          </div>
+          <div class="cap"><span class="num">02</span><h3>Claude와 연결</h3><p><a href="https://claude.ai/code" target="_blank" rel="noopener" style="color:var(--accent)">claude.ai/code</a> → 깃허브 연결 → 저장소 선택</p></div>
+        </div>
+
+        <div class="slide">
+          <div class="mock gh">
+            <div class="ghbar">🐙 <span>ai-class · Settings</span></div>
+            <div class="side">
+              <div class="nav"><div>General</div><div>Branches</div><div class="sel">Pages</div></div>
+              <div class="body">
+                <label>Source</label><div class="inp">Deploy from a branch</div>
+                <label>Branch</label><div class="inp">main &nbsp;/&nbsp; (root)</div>
+                <span class="gbtn hl" data-target>Save</span>
+              </div>
+            </div>
+          </div>
+          <div class="cap"><span class="num">03</span><h3>GitHub Pages 켜기</h3><p><kbd>Settings</kbd> → <kbd>Pages</kbd> → main 선택 → Save</p></div>
+        </div>
+
+        <div class="slide">
+          <div class="mock gh">
+            <div class="ghbar">🐙 <span>Pull request #1</span></div>
+            <div class="body">
+              <span class="st" style="display:inline-block;background:#1f883d;color:#fff;border-radius:999px;padding:2px 10px;font-size:11px;font-weight:700">Open</span>
+              <b style="display:block;margin:6px 0">1차시 수업 자료 페이지 추가</b>
+              <div class="prbox">
+                <div class="check-ok">✓ 바뀐 파일: index.html, lesson1.html</div>
+                <div class="check-ok">✓ 충돌 없음</div>
+                <span class="gbtn green hl" data-target>Merge pull request</span>
+              </div>
+            </div>
+          </div>
+          <div class="cap"><span class="num">04</span><h3>확인하고 Merge</h3><p>Claude가 올린 PR을 보고 버튼 한 번</p></div>
+        </div>
+
+        <div class="slide">
+          <div class="mock">
+            <div class="bar"><i></i><i></i><i></i><span class="url hl" data-target>https://내아이디.github.io/ai-class/</span></div>
+            <div class="body" style="text-align:center;padding-top:30px">
+              <div style="font-size:42px">🌐</div>
+              <b style="font-size:16px">1~2분 뒤 사이트에 반영!</b>
+              <p style="color:#888">다음 차시도 Claude에게 말만 하면 계속 쌓여요</p>
+            </div>
+          </div>
+          <div class="cap"><span class="num">05</span><h3>무료 사이트 완성</h3><p>아이디.github.io/저장소이름</p></div>
+        </div>
+
+      </div></div>
+      <div class="deck-nav">
+        <button class="arrow prev" aria-label="이전">←</button>
+        <div class="dots"></div>
+        <button class="arrow next-btn" aria-label="다음">→</button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec-title reveal">알아 두면 좋은 말</h2>
+    <p class="sec-sub reveal">카드에 마우스를 올리거나 눌러 보세요.</p>
+    <div class="flips reveal">
+      <button class="flip"><div class="in"><div class="f"><span>📁 저장소<small>Repository</small></span></div><div class="b">사이트 파일이 모인 폴더</div></div></button>
+      <button class="flip"><div class="in"><div class="f"><span>💾 커밋<small>Commit</small></span></div><div class="b">"여기까지 저장" 기록</div></div></button>
+      <button class="flip"><div class="in"><div class="f"><span>🌿 브랜치<small>Branch</small></span></div><div class="b">원본을 지키는 작업용 사본</div></div></button>
+      <button class="flip"><div class="in"><div class="f"><span>🔀 PR<small>Pull Request</small></span></div><div class="b">"이렇게 바꿨어요" 확인 요청서</div></div></button>
+      <button class="flip"><div class="in"><div class="f"><span>✅ Merge<small>합치기</small></span></div><div class="b">원본에 합치면 사이트에 반영</div></div></button>
+    </div>
+  </section>
+
+  <section>
+    <a class="cta-card reveal" href="https://github.com/kang-teacher/1021" target="_blank" rel="noopener">
+      <span class="ic">✨</span>
+      <span><b>지금 보는 이 연수 페이지도 이렇게 만들었어요</b><small>저장소 구경하기</small></span>
+      <span class="arrow">↗</span>
+    </a>
+  </section>
+
+  <nav class="next">
+    <a href="cafe24.html"><small>← 이전 주제</small><b>② 카페24</b></a>
+    <a class="r" href="oesol.html"><small>다음 주제 →</small><b>④ 외솔.한국</b></a>
+  </nav>
+</main>
+
+<footer class="footer">인공지능 연수 자료 · 웹 제작 활용</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>
