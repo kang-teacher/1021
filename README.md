@@ -1,19 +1,18 @@
 # AI와 함께하는 웹 제작 연수
 
-다양한 웹 제작 방법을 소개하는 교사 연수용 웹페이지입니다.
+다양한 웹 제작 방법을 소개하는 교사 연수용 웹사이트입니다. 첫 화면에서 주제 카드를 누르면 주제별 페이지로 이동합니다.
 
-1. 구글 스프레드시트 + Apps Script로 웹페이지 만들기
-2. 카페24로 나만의 도메인 사이트 만들기 (모바일 청첩장 사례)
-3. 깃허브 + Claude로 수업 자료 사이트 만들기
-4. 외솔.한국으로 HTML 파일 바로 올리기
+| 페이지 | 내용 |
+| --- | --- |
+| `index.html` | 첫 화면 (네 가지 방법 카드) |
+| `sheet.html` | ① 구글 스프레드시트 + Apps Script (슬라이드형 따라하기, 안내 문서 연결) |
+| `cafe24.html` | ② 카페24 (바로가기, 모바일 청첩장 사례, 만드는 순서) |
+| `github.html` | ③ 깃허브 + Claude (준비 슬라이드, 용어 카드) |
+| `oesol.html` | ④ 외솔.한국 (외솔 드롭, URL 줄이기) |
 
-## 보는 방법
+공통 디자인과 동작은 `assets/style.css`, `assets/app.js`에 있습니다.
 
-- 저장소의 `index.html`을 브라우저로 열면 바로 볼 수 있습니다.
-- GitHub Pages로 공개하려면 `Settings` → `Pages` → Source를 `Deploy from a branch`, Branch를 `main` / `(root)`로 저장하세요.
-  주소: `https://kang-teacher.github.io/1021/`
+## 공개하기
 
-## 파일
-
-- `index.html`: 연수 페이지 본문
-- `style.css`: 디자인 (라이트/다크 모드, 모바일 대응)
+`Settings` → `Pages` → Source를 `Deploy from a branch`, Branch를 `main` / `(root)`로 저장하면
+`https://kang-teacher.github.io/1021/` 주소로 볼 수 있습니다.
